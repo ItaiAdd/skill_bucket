@@ -5,6 +5,6 @@
 ### Current stage: **PROOF OF CONCEPT**
 
 ### Useful Links:
- - Instructions for contributors.
+ - [Instructions for contributors](docs/CONTRIBUTING.md).
  - SkillBucket architecture diagram [COMING SOON].
  - Tickets [COMING SOON]
