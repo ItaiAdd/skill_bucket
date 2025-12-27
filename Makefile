@@ -194,9 +194,16 @@ gen-ts-client: ## Generate TS client/types from OpenAPI (requires package script
 
 # --- smoke / health ---
 .PHONY: health
-health: ## Quick health checks (api + qdrant)
-	@curl -fsS http://localhost:8000/health >/dev/null && echo "api ok" || (echo "api FAIL"; exit 1)
-	@curl -fsS http://localhost:6333/readyz >/dev/null && echo "qdrant ok" || (echo "qdrant FAIL"; exit 1)
+health:
+	@echo "Checking MinIO..." \
+	&& curl -fsS http://localhost:9000/minio/health/ready >/dev/null \
+	&& echo "  ok"
+	@echo "Checking Qdrant..." \
+	&& curl -fsS http://localhost:6333/readyz >/dev/null \
+	&& echo "  ok"
+	@echo "Checking Postgres..." \
+	&& docker compose -f infra/compose.yaml exec -T postgres pg_isready -U $${POSTGRES_USER:-skillbucket} -d $${POSTGRES_DB:-skillbucket} >/dev/null \
+	&& echo "  ok"
 
 .PHONY: smoke
 smoke: up health ## Bring stack up + health check
