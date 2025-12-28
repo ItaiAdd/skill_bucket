@@ -5,3 +5,4 @@ class Base(DeclarativeBase):
     """
     Base class for ORM models.
     """
+    pass
