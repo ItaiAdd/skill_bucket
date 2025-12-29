@@ -27,13 +27,13 @@ An `Activitiy` is something a user has done which can be used as evidence toward
 Attribute      | Type     | Description                               | Nullable
 :---:          | :---:    | :---:                                     | :---:
 id             | UUID     | Primary key                               | no
-title          | String   | title of activity                         | no
-description    | Text     | details of the activity                   | no
-project        | String   | project the activity contributed towards  | yes
-date_started   | Date     | date when the activity started            | yes
-activity_ended | Date     | date when the activity ended              | yes
-created_at     | DateTime | datetime the entity was created           | no
-updated_at     | DateTime | datetime the entity was last updated      | no
+title          | String   | Title of activity                         | no
+description    | Text     | Details of the activity                   | no
+project        | String   | Project the activity contributed towards  | yes
+date_started   | Date     | Date when the activity started            | yes
+activity_ended | Date     | Date when the activity ended              | yes
+created_at     | DateTime | Datetime the entity was created           | no
+updated_at     | DateTime | Datetime the entity was last updated      | no
 
 <br />
 <br />
@@ -44,13 +44,13 @@ A `Framework` is a CPD/competency framework (e.g SFIA)
 Attribute      | Type     | Description                               | Nullable
 :---:          | :---:    | :---:                                     | :---:
 id             | UUID     | Primary key                               | no
-name           | String   | framework name                            | no
-version        | String   | framework version                         | yes
-description    | Text     | description of the framework.             | no
-license        | String   | framework license                         | yes
+name           | String   | Framework name                            | no
+version        | String   | Framework version                         | yes
+description    | Text     | Description of the framework.             | no
+license        | String   | Framework license                         | yes
 homepage_url   | String   | URL of framework homepagevv               | yes
-created_at     | DateTime | datetime the entity was created           | no
-updated_at     | DateTime | datetime the entity was last updated      | no
+created_at     | DateTime | Datetime the entity was created           | no
+updated_at     | DateTime | Datetime the entity was last updated      | no
 
 <br />
 <br />
@@ -62,17 +62,17 @@ Attribute       | Type       | Description                                 | Nul
 :---:           | :---:      | :---:                                       | :---:
 id              | UUID       | Primary key                                 | no
 framework_id    | UUID       | Foreign key for `Framework`                 | no
-title           | String     | document title                              | yes
-description     | Text       | description of the document                 | yes
-doc_type        | String     | document type (e.g pdf, docx)               | no
-content_type    | String     | document content type (e.g application/pdf) | yes
-storage_backend | String     | storage solution used for this document     | no
-bucket          | String     | storage bucket name                         | no
-object_key      | String     | key of document object in bucket            | no
-size_bytes      | BigInteger | document size in bytes                      | yes
-checksum        | String     | document checksum                           | yes
-created_at      | DateTime   | datetime the entity was created             | no
-updated_at      | DateTime   | datetime the entity was last updated        | no
+title           | String     | Document title                              | yes
+description     | Text       | Description of the document                 | yes
+doc_type        | String     | Document type (e.g pdf, docx)               | no
+content_type    | String     | Document content type (e.g application/pdf) | yes
+storage_backend | String     | Storage solution used for this document     | no
+bucket          | String     | Storage bucket name                         | no
+object_key      | String     | Key of document object in bucket            | no
+size_bytes      | BigInteger | Document size in bytes                      | yes
+checksum        | String     | Document checksum                           | yes
+created_at      | DateTime   | Datetime the entity was created             | no
+updated_at      | DateTime   | Datetime the entity was last updated        | no
 
 <br />
 <br />
