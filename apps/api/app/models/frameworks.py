@@ -17,7 +17,6 @@ class Framework(Base):
 
     id = Column(UUID(as_uuid=True), primary_key=True, default=uuid4)
 
-    # Consider adding version so you can store SFIA v7/v8 side-by-side
     name = Column(String, nullable=False)
     version = Column(String, nullable=True)
 

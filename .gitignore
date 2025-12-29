@@ -11,3 +11,6 @@ wheels/
 
 # local files + dirs
 .env
+
+# misc
+.DS_Store
