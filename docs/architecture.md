@@ -2,7 +2,7 @@
 
 #### This docuument contains information about the design of SkillBucket.
 
-### Contents
+## Contents
 [Database Structure](#Database-Structure)
 - [entity relationship diagram](#entity-relationship-diagram)
 - [entities and attributes](#entities-and-attributes-tables-and-fields)
@@ -10,14 +10,16 @@
 
 ## Database Structure
 
+> ⚠️ Everything in this section is a prototype intended for the proof of concept stage and is subject to change during development.
+
 ### Entity Relationship Diagram
 The core database structure is a set of PostgreSQL tables as shown in the entity relationship diagram below. This is interacted with using a Python ORM ([SQLAlchemy](https://www.sqlalchemy.org)).
-
-> ⚠️ This is a prototype schema and is subject to change during development.
 
 <p align="left">
     <img src="images/postgres_ER_diagram_29-12-25.svg" alt="PostgreSQL Entity Relationship Diagram" width="750"/>
 </p>
+
+<br />
 
 ### Entities and Attributes (Tables and Fields)
 
@@ -36,7 +38,6 @@ created_at     | DateTime | Datetime the entity was created           | no
 updated_at     | DateTime | Datetime the entity was last updated      | no
 
 <br />
-<br />
 
 #### Entity: Framework
 A `Framework` is a CPD/competency framework (e.g SFIA)
@@ -52,7 +53,6 @@ homepage_url   | String   | URL of framework homepagevv               | yes
 created_at     | DateTime | Datetime the entity was created           | no
 updated_at     | DateTime | Datetime the entity was last updated      | no
 
-<br />
 <br />
 
 #### Entity: FrameworkDocument
@@ -74,7 +74,6 @@ checksum        | String     | Document checksum                           | yes
 created_at      | DateTime   | Datetime the entity was created             | no
 updated_at      | DateTime   | Datetime the entity was last updated        | no
 
-<br />
 <br />
 
 #### Entity: KnowledgeChunk
@@ -103,10 +102,9 @@ created_at            | DateTime   | Datetime the entity was created            
 updated_at            | DateTime   | Datetime the entity was last updated             | no
 
 <br />
-<br />
 
 #### Entity: ActivityEvidence
-A `ActivitiyEvidence` is an `Activity` which evidences a certain skill fro a specific `Framework`.
+A `ActivitiyEvidence` is an `Activity` which evidences a certain skill for a specific `Framework`.
 
 Attribute            | Type        | Description                                                                    | Nullable
 :---:                | :---:       | :---:                                                                          | :---:
