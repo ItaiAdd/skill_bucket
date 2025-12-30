@@ -82,7 +82,7 @@ Before opening a pull request, please make sure that:
 - New functionality includes tests where appropriate
 - Documentation is updated if behaviour changes
 
-When you have finalised your contribution, make a pull request (PR) into the ```develop``` branch. There will be templates available for each [contribution type](#TYPE). If your PR fixes, resolves, or closes an issue, please include the relevant keyword (e.g ```Closes #123```).
+When you have finalised your contribution, make a pull request (PR) into the `develop` branch. There will be templates available for each [contribution type](#TYPE). These templates can be accessed by switching to the preview view on the PR description and then clicking the approapriate option ([more on PR templates here](#pull-request-templates)). If your PR fixes, resolves, or closes an issue, please include the relevant keyword (e.g `Closes #123`) in the PR message.
 
 Resolve any comments left on the PR, and once it’s merged — enjoy the cred 🎉
 
@@ -125,3 +125,14 @@ The description should briefly summarise what the point of the work is. The ```D
 - readme_updates
 - skill_query_endpoint
 - agent_response_error_handling
+
+
+## Pull Request Templates
+
+Each [branch type](#type) has an associated PR template all of which can be found in [`.github/PULL_REQUEST_TEMPLATES`](../.github/PULL_REQUEST_TEMPLATE/). There are 3 ways of using these templates.
+
+1. When creating a PR, you will find a default PR message in the description. switching to the preview view will allow you to click on the options. Clicking on an option will open the template in the message editor.
+
+2. Add a query parameter to the URL for the branch comparison page of the form `?expand=1&template=<template_filename>`, for example `https://github.com/<org>/<repo>/compare/<branch>?expand=1&template=feature.md`. After adding this reload the new URL and the template should appear in the message editor.
+
+3. The other way to use a template is to simply copy and paste the raw markdown code from on of the template files. ⚠️ Note you should use the version of the template files on the `main` branch. 
