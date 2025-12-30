@@ -1,0 +1,21 @@
+[project]
+name = "skillbucket-api"
+version = "0.1.0"
+description = "SkillBucket backend API"
+requires-python = ">=3.12"
+
+dependencies = [
+  "fastapi",
+  "pydantic>=2.12.5",
+  "sqlalchemy>=2.0.45",
+  "uvicorn[standard]",
+]
+
+[tool.uv]
+dev-dependencies = [
+  "ruff",
+  "pytest",
+]
+
+[tool.ruff]
+line-length = 100
